@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>SpringJDBC_MVC_Freemarker</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
 
 </project>
