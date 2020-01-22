@@ -6,5 +6,7 @@
 </head>
 <body>
 <h2>hello Spring</h2>
+<br>
+<a href="/SpringJDBC_MVC_Freemarker_war/hello">Hello page</a>
 </body>
 </html>

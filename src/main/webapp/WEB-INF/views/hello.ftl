@@ -6,5 +6,6 @@
 </head>
 <body>
 <h2>this is a test template</h2>
+<a href="/SpringJDBC_MVC_Freemarker_war/users">go to Users</a>
 </body>
 </html>
