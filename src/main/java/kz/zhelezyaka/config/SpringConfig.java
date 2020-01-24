@@ -1,10 +1,7 @@
 package kz.zhelezyaka.config;
 
-import kz.zhelezyaka.dao.UserDao;
-import kz.zhelezyaka.dao.UserDaoImpl;
-import kz.zhelezyaka.service.UserService;
-import kz.zhelezyaka.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -12,6 +9,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan(basePackages = {"kz.zhelezyaka.service", "kz.zhelezyaka.dao"})
 public class SpringConfig {
 
     @Bean
@@ -27,15 +25,5 @@ public class SpringConfig {
         dataSource.setPassword("zh");
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         return dataSource;
-    }
-
-    @Bean
-    public UserDao getUserDao() {
-        return new UserDaoImpl(getJdbcTemplate());
-    }
-
-    @Bean
-    public UserService getUserService() {
-        return new UserServiceImpl();
     }
 }

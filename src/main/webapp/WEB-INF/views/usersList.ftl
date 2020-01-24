@@ -19,8 +19,11 @@
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.age}</td>
+            <td><a href="/SpringJDBC_MVC_Freemarker_war/delete/${user.id}">Delete</a></td>
+            <td><a href="/SpringJDBC_MVC_Freemarker_war/update/${user.id}">Update</a></td>
         </tr>
     </#list>
 </table>
+<a href="/SpringJDBC_MVC_Freemarker_war/createUser">Create User</a>
 </body>
 </html>

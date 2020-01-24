@@ -4,9 +4,11 @@ import kz.zhelezyaka.entity.User;
 import kz.zhelezyaka.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class UserDaoImpl implements UserDao {
 
     public final JdbcTemplate jdbcTemplate;
